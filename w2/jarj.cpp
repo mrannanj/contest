@@ -7,19 +7,19 @@ using namespace std;
 #define LETTERS 26
 
 void check(char s[]) {
-    int len =strlen(s);
-    int maxlen = len/2 + len%2;
-    int letters[LETTERS];
-    memset(letters, 0, LETTERS*sizeof(int));
-    for (int k = 0; k < len; ++k) {
-      letters[s[k] - 'A'] += 1;
-      if (letters[s[k] - 'A'] > maxlen) {
-        cout << "NO" << endl;
-        return;
-      }
+  int len =strlen(s);
+  int maxlen = len/2 + len%2;
+  int letters[LETTERS];
+  memset(letters, 0, LETTERS*sizeof(int));
+  for (int k = 0; k < len; ++k) {
+    letters[s[k] - 'A'] += 1;
+    if (letters[s[k] - 'A'] > maxlen) {
+      cout << "NO" << endl;
+      return;
     }
-    cout << "YES" << endl;
-    return;
+  }
+  cout << "YES" << endl;
+  return;
 }
 
 int main(void) {
