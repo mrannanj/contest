@@ -100,7 +100,5 @@ out:  while(0);
   }
 
   cout << sum << endl;
-
-  return 0;
 }
 

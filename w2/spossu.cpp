@@ -54,7 +54,6 @@ void print_range() {
 }
 
 int main(void) {
-
   int n;
   cin >> n;
 

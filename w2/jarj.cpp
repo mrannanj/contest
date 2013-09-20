@@ -19,7 +19,6 @@ void check(char s[]) {
     }
   }
   cout << "YES" << endl;
-  return;
 }
 
 int main(void) {
@@ -31,5 +30,4 @@ int main(void) {
     cin >> s;
     check(s);
   }
-  return 0;
 }

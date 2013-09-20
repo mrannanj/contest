@@ -9,10 +9,10 @@ C_TARG := $(patsubst ./%.c, %, $(C_SOURCE))
 all: $(CPP_TARG) $(C_TARG)
 
 $(CPP_TARG):%: %.cpp
-	g++ -Wall -Wextra -Wno-unused-variable -std=c++11 $< -o $@
+	g++ -Wall -Wextra -Wno-unused -std=c++11 $< -o $@
 
 $(C_TARG):%: %.c
-	gcc -Wall -Wextra -Wno-unused-variable -std=c99 $< -o $@ -lm
+	gcc -Wall -Wextra -Wno-unused -std=c99 $< -o $@ -lm
 
 clean:
 	rm -f $(C_TARG) $(CPP_TARG)
