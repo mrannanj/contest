@@ -3,20 +3,25 @@ C_SOURCE := $(shell find -name '*.c')
 
 CPP_TARG := $(patsubst ./%.cpp, %, $(CPP_SOURCE))
 C_TARG := $(patsubst ./%.c, %, $(C_SOURCE))
+TARG := $(CPP_TARG) $(C_TARG)
+
+W := -Wall -Wextra -Wno-unused
+
+MAKEFLAGS := -j4
 
 .PHONY: all clean ignore
 
-all: $(CPP_TARG) $(C_TARG)
+all: $(TARG)
 
 $(CPP_TARG):%: %.cpp
-	g++ -Wall -Wextra -Wno-unused -std=c++11 $< -o $@
+	$(CXX) $(W) -g -std=c++11 $^ -o $@
 
 $(C_TARG):%: %.c
-	gcc -Wall -Wextra -Wno-unused -std=c99 $< -o $@ -lm
+	$(CC) $(W) -g -std=c99 $^ -o $@
 
 clean:
-	rm -f $(C_TARG) $(CPP_TARG)
+	$(RM) $(TARG)
 
 ignore:
-	@echo $(CPP_TARG) $(C_TARG) | sed -e 's: :\n:g'
+	echo "$(TARG)" | sed -e 's: :\n:g'
 
