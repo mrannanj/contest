@@ -23,5 +23,5 @@ clean:
 	$(RM) $(TARG)
 
 ignore:
-	echo "$(TARG)" | sed -e 's: :\n:g'
+	@echo "$(TARG)" | sed -e 's:\s\+:\n:g'
 
