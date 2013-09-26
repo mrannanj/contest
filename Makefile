@@ -14,10 +14,10 @@ MAKEFLAGS := -j4
 all: $(TARG)
 
 $(CPP_TARG):%: %.cpp
-	$(CXX) $(W) -g -std=c++11 $^ -o $@
+	$(CXX) $(W) -rdynamic -g3 -std=c++11 $^ -o $@
 
 $(C_TARG):%: %.c
-	$(CC) $(W) -g -std=c99 $^ -o $@
+	$(CC) $(W) -rdynamic -g3 -std=c99 $^ -o $@
 
 clean:
 	$(RM) $(TARG)
