@@ -18,11 +18,8 @@ void summa() {
   cout << n << endl;
 }
 
-int main(void) {
-  int n;
-  cin >> n;
-  for (int i = 0; i < n; ++i) {
-    summa();
-  }
-  return 0;
+int main() {
+  int n; cin >> n;
+  while (n--) summa();
 }
+

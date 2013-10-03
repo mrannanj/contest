@@ -5,6 +5,7 @@ w3/laatat
 w3/nimilista
 w1/summat
 w1/resiinat
+w1/sokkelo
 w2/spossu
 w2/jarj
 w2/viiva
@@ -12,4 +13,10 @@ w2/tukikohta
 w2/nelio
 w2/palindromi
 template
+duel/kone
+w4/sade
+w4/labyrintti
+w4/ruudukko
+w4/murto
+backtrace/backtrace
 
