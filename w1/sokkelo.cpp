@@ -49,11 +49,10 @@ void bfs() {
         dist[u.y][u.x] = d + 1;
         Q.push_back({u.x, u.y});
         if (sok[u.y][u.x] == 'B') {
-          if (d % 2 == 0) {
+          if (d % 2 == 0)
             cout << "YES" << endl;
-          } else {
+          else
             cout << "NO" << endl;
-          }
           goto out;
         }
       }
