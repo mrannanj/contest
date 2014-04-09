@@ -5,7 +5,7 @@ CPP_TARG := $(patsubst ./%.cpp, %, $(CPP_SOURCE))
 C_TARG := $(patsubst ./%.c, %, $(C_SOURCE))
 TARG := $(CPP_TARG) $(C_TARG)
 
-W := -Wall -Wextra -Wno-unused
+W := -Wextra -Wall -Wno-unused -Wno-unused-result
 
 MAKEFLAGS := -j4
 
@@ -14,10 +14,10 @@ MAKEFLAGS := -j4
 all: $(TARG)
 
 $(CPP_TARG):%: %.cpp
-	$(CXX) $(W) -rdynamic -g3 -std=c++11 $^ -o $@
+	$(CXX) $(W) -O2 -g -std=gnu++11 $^ -o $@
 
 $(C_TARG):%: %.c
-	$(CC) $(W) -rdynamic -g3 -std=c99 $^ -o $@
+	$(CC) $(W) -O2 -g -std=c99 $^ -o $@
 
 clean:
 	$(RM) $(TARG)

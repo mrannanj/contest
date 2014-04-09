@@ -8,6 +8,7 @@ using namespace std;
 struct taika {
   int a[16];
   int u[17];
+  int s[10];
 };
 
 int search(taika& t, int p) {
@@ -42,6 +43,7 @@ int search(taika& t, int p) {
   int n = 0;
   for (int i = 1; i <= 16; ++i) {
     if (t.u[i]) {
+      if ((i >= 0 && i < 4) && (p >= 0 && p < 2) && (p >= 5 && p < 7)) continue;
       t.a[p] = i;
       t.u[i] = 0;
       n += search(t, p+1);
@@ -56,6 +58,7 @@ int main() {
   taika tk = {
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
     { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
   };
 
   cout << search(tk, 0) << endl;
