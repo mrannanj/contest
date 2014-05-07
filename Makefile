@@ -5,7 +5,8 @@ CPP_TARG := $(patsubst ./%.cpp, %, $(CPP_SOURCE))
 C_TARG := $(patsubst ./%.c, %, $(C_SOURCE))
 TARG := $(CPP_TARG) $(C_TARG)
 
-W := -Wextra -Wall -Wno-unused -Wno-unused-result
+W := -Wextra -Wall -pedantic -Wno-unused-parameter -Wno-unused-result
+W += -Wno-unused
 
 MAKEFLAGS := -j4
 
