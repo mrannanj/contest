@@ -18,7 +18,7 @@ $(CPP_TARG):%: %.cpp
 	$(CXX) $(W) -O2 -g -std=gnu++11 $^ -o $@
 
 $(C_TARG):%: %.c
-	$(CC) $(W) -O2 -g -std=c99 $^ -o $@
+	$(CC) $(W) -O2 -g -std=gnu89 $^ -o $@
 
 clean:
 	$(RM) $(TARG)
