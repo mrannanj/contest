@@ -91,6 +91,7 @@ cf/254_2/a
 cf/20/c
 cf/257_2/b
 cf/257_2/a
+cf/257_2/c
 hr/warmup/solve-me-first
 hr/warmup/maximizing-xor
 hr/dp/play-game
@@ -102,5 +103,6 @@ hr/unknown/task-scheduling
 hr/euler/euler003
 hr/euler/euler001
 hr/euler/euler004
+hr/euler/euler005
 hr/euler/euler002
 hr/graph/even-tree
